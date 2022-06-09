@@ -622,6 +622,11 @@ body{
         height:60px;
         border-radius: 5px;
         border:0.5px dotted #000;
+
+    }
+
+    .form__input--modifier:focus{
+        transform:scale(1.10);
     }
 
     .form__h2--modifier{
@@ -680,8 +685,15 @@ body{
     color: #000;
 }
 
+.mainacts__griditems--modifier:hover{
+    transform: scale(1.04);
+
+}
+
 .griditem__a--modifier:hover{
     color:#fff;
+    transform: scale(5);
+    filter: opacity(0.9);
 }
 
 #bodyactividades{
