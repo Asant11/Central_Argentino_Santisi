@@ -12,10 +12,11 @@
 body{
     font-family: "Akshar";
     background-color: rgb(245, 245, 220);
+    overflow-x: hidden;
 }
 
 .nav{
-    background-color: rgb(10, 32, 130, 1);
+    background: linear-gradient(#0a2082, #030e42);
     font-family: "Akshar";
     font-size:22px;
     text-decoration: none;
@@ -26,113 +27,49 @@ body{
     font-size: 30px;
 }
 
-@media (min-width:320px) and (max-width: 640px) {
+.cards_links{
+    text-decoration: none;
+    color: #000;
+}
 
-    /*INDEX*/
+.card-text{
+    font-size: 1.4em;
+}
+
+.card{
+    background: linear-gradient(#fff,#fdfd96);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
+}
+
+.footer{
+    background: linear-gradient(#0a2082, #030e42);
+}
+
+.card_deportes{
+    margin:51px;
+    border: 2px solid #000;
+    border-radius: 13px;
+}
+
+.card-img-top{
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+@media (min-width:320px) {
+
+   .BodyIndexDesktop{
+    display: none;
+   }
+
+   .imgsindex{
+    width:190px;
     
-    .Index__Cuerpo{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: 
-        "header "
-        "MainIndexMobile"
-        "footer ";
-    
-    }
-    
-    
+   }
 
-     .Index__Imagen1, .Index__Cuerpo, .nav__ul{
-        display: none;
-    }
-
-    .footer{
-        grid-area: footer;
-        background-color: rgba(252, 186, 3, 1);
-        font-size: 10px;
-        display: flex;
-        width: 100vw;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-    .footer__link--modifier{
-        text-decoration: none;
-        margin:0px 0px 0px 10px;
-        align-items: center;
-    }
-    
-    .footer__h3--modifier{
-        margin:0px 0px 5px 0px
-    }
-
-    .MainIndexMobile{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: repeat(4, auto);
-        margin-top: 30px;
-        grid-template-areas: 
-        "Deportes Deportes"
-        "Act Act"
-        "Ubicacion Ubicacion"
-        "Contacto Contacto";
-        justify-content: center;
-        padding:12px;
-        height: 100vh;
-        
-    }
-
-    .Div__Deportes{
-        grid-area:Deportes;
-
-        }
-
-    .Div__Act{
-        grid-area: Act;
-    }
-
-    .Div__Ubicacion{
-        grid-area: Ubicacion;
-    }
-
-    .Div__Contacto{
-        grid-area: Contacto;
-    }
-
-    .Divs{
-        border: 2px solid rgb(0, 0, 1);
-        border-radius: 10px;
-        box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
-        background-color: rgba(113, 106, 216, 0.4);
-        height: 110px;
-        width:300px;
-        align-items: center;
-        justify-content: space-evenly;
-        display: flex;
-    }
-
-    #a__Act{
-        width:20px;
-        margin-right: 80px;
-    }
-
-    .main__div__p{
-        width:160px
-    }
-
-    .main__div__a{
-        text-decoration: none;
-        color: rgb(0, 0, 139);
-        text-transform: uppercase;
-    }
-
-    #Div__A--modifier{
-        width:120px;
-    }
 
    /*DEPORTES*/
    
-   .maindeportes{
+   /* .maindeportes{
        display:grid;
        grid-template-columns: auto auto;
        grid-row: repeat(6, auto);
@@ -143,9 +80,9 @@ body{
        "boxeo boxeo"
        "taekwondo taekwondo"
        "aikido aikido";
-   }
+   } */
 
-   .div__futfemenino{
+   /* .div__futfemenino{
        grid-area: futfemenino;
    }
 
@@ -167,7 +104,9 @@ body{
    
    .div__aikido{
        grid-area:aikido;
-   }
+   } */
+
+
    
    
    
@@ -281,14 +220,8 @@ body{
             justify-content: center;
         }
     
-        .footer__h3--modifier{
-            margin:0px 0px px 0px;
-            font-size: 15px;
-        }
+
     
-        .nav__ul{
-            display: inline-block;
-        }
     
         /*ACTIVIDADES E INSTALACIONES*/
 
@@ -324,8 +257,11 @@ body{
 
 
 
-@media (min-width:921px) {
+@media (min-width:1024px) {
 
+    .BodyIndexDesktop{
+        display: block;
+       }
     .MainIndexMobile{
         display: none;
     }
@@ -371,34 +307,6 @@ body{
         width: 300px;
         margin-top: 65px;
         margin-left: 190px;
-}
-    
-
-
-/*header*/
-
-
-
-
-/*Footer*/    
-
-.footer{
-    grid-area: footer;
-    font-family: "Akshar";
-    background-color: rgba(252, 186, 3, 1);
-    font-size: 18px;
-    display: flex;
-    width: 100vw;
-    justify-content: space-evenly;
-}
-.footer__link--modifier{
-    text-decoration: none;
-    margin:0px 0px 0px 10px;
-    font-size: 22px;
-}
-
-.footer__h3--modifier{
-    margin:0px 0px 5px 0px
 }
 
 /*Ubicación*/
