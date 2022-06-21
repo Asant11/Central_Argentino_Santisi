@@ -1,527 +1,399 @@
-@font-face { 
-    font-family: Akshar; 
-    src: url('../fuentes/Akshar-VariableFont_wght.ttf'); 
-} 
+@charset "UTF-8";
+@font-face {
+  font-family: Akshar;
+  src: url("../fuentes/Akshar-VariableFont_wght.ttf");
+}
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-
-body{
-    font-family: "Akshar";
-    background-color: rgb(245, 245, 220);
-    overflow-x: hidden;
+body {
+  font-family: "Akshar";
+  background-color: rgb(255, 249, 224);
+  overflow-x: hidden;
 }
 
-.nav{
-    background: linear-gradient(#0a2082, #030e42);
-    font-family: "Akshar";
-    font-size:22px;
-    text-decoration: none;
-    color: #fff;
+.nav {
+  background: linear-gradient(#0a2082, #030e42);
+  font-family: "Akshar";
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+}
+.nav .navbar-brand {
+  font-size: 30px;
 }
 
-.navbar-brand{
-    font-size: 30px;
+.footer {
+  background: linear-gradient(#0a2082, #030e42);
 }
 
-.cards_links{
+@media (min-width: 320px) {
+  .BodyIndexDesktop {
+    display: none;
+  }
+
+  .imgsindex {
+    width: 190px;
+  }
+
+  /*CONTACTO*/
+  .contacto {
+    background-color: rgb(255, 249, 224);
+  }
+
+  .maincontacto {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "form" "redes";
+    row-gap: 50px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .div_redes {
+    grid-area: redes;
+    background-color: rgba(252, 186, 3, 0.3);
+    width: 400px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    font-size: 24px;
+    box-shadow: 0 0 40px -10px #000;
+  }
+
+  .div__ul-redes {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+  }
+  .div__ul-redes .ul__li-redes {
+    margin: 10px 0px 10px 0px;
+  }
+  .div__ul-redes .ul__li-redes .li__a-redes {
     text-decoration: none;
     color: #000;
-}
+    text-transform: uppercase;
+  }
+  .div__ul-redes .ul__li-redes .li__a-redes:hover {
+    color: #0a2082;
+  }
 
-.card-text{
-    font-size: 1.4em;
-}
-
-.card{
-    background: linear-gradient(#fff,#fdfd96);
-    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 1);
-}
-
-.footer{
-    background: linear-gradient(#0a2082, #030e42);
-}
-
-.card_deportes{
-    margin:51px;
-    border: 2px solid #000;
-    border-radius: 13px;
-}
-
-.card-img-top{
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
-}
-@media (min-width:320px) {
-
-   .BodyIndexDesktop{
-    display: none;
-   }
-
-   .imgsindex{
-    width:190px;
-    
-   }
-
-
-   /*DEPORTES*/
-   
-   /* .maindeportes{
-       display:grid;
-       grid-template-columns: auto auto;
-       grid-row: repeat(6, auto);
-       grid-template-areas: 
-       "futfemenino futfemenino"
-       "femInfantil femInfantil"
-       "futmasculino futmasculino"
-       "boxeo boxeo"
-       "taekwondo taekwondo"
-       "aikido aikido";
-   } */
-
-   /* .div__futfemenino{
-       grid-area: futfemenino;
-   }
-
-   .div__FemeninoInfantil{
-       grid-area: femInfantil;
-   }
-
-   .div__Futmasculino{
-       grid-area: futmasculino;
-   }
-
-   .div__boxeo{
-       grid-area: boxeo;
-   }
-
-   .div__taekwondo{
-       grid-area: taekwondo;
-   }
-   
-   .div__aikido{
-       grid-area:aikido;
-   } */
-
-
-   
-   
-   
-    /*CONTACTO*/
-
-    .contacto{
-        background-color: rgba(255, 249, 224, 1);
-        }
-        
-        .maincontacto{
-            display:grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto;
-            grid-template-areas: 
-            "form" 
-            "redes";
-            row-gap: 50px;
-            align-content: center;
-            justify-content: center;
-        }
-        
-        .div_redes{
-            grid-area: redes;
-            background-color: rgba(252, 186, 3, 0.3);
-            width: 400px;
-            border: 1px solid #000;
-            border-radius: 15px;
-            font-size: 24px;
-            box-shadow: 0 0 40px -10px #000;
-        }
-    
-        .div__ul-redes{
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .ul__a-redes{
-            text-decoration: none;
-            color:#000;
-        }
-    
-        .ul__li-redes{
-            padding: 20px 0px 20px 0px;
-        }
-        
-        .form__label--modifier{
-            padding:9px;
-        }
-    
-        form{
-        margin-top: 50px;
-        width:400px;
-        font-family: "Akshar";
-        background-color: rgba(252, 186, 3, 0.3);
-        grid-area: form;
-        border: 1px solid #000;
-        border-radius: 15px;    
-        box-shadow: 0 0 40px -10px #000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: "Akshar";
-        }
-    
-        .form__input--modifier{
-            padding: 5px;
-            width:80%;
-            height:60px;
-            border-radius: 5px;
-            border:0.5px dotted #000;
-        }
-    
-        .form__h2--modifier{
-            text-decoration: underline #000;
-            margin-top: 15px;
-        }
-    
-        .form__submit--modifier{
-            margin: 15px;
-            width:40%;
-            height: 50px;
-            font-size: 21px;
-            background-color: rgb(255,255,255,0.8);
-            border: 0.5px solid #000;
-            font-family: "Akshar";
-            border-radius: 5px;
-        }
-
-        /*UBICACIÓN*/
-
-        .Section__div__h2{
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-    
-        .Section__div__p{
-            grid-area: parrafo;
-            margin-bottom: 20px;
-            font-size: 18px;
-            margin: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-
-    
-    
-        /*ACTIVIDADES E INSTALACIONES*/
-
-        .mainacts__divcontainer--modifier{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 200px);
-            justify-content: center;
-            align-items: center;
-            row-gap: 20px;
-            margin: 30px;
-            column-gap: 20px;
-        }
-
-        .mainacts__griditems--modifier{
-            background-color: grey;
-            border-radius: 8px;
-            box-shadow: 0 5px 10px 0 #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:120px;
-        }
-        
-        .griditem__a--modifier{
-            text-decoration: none;
-            color: #000;
-        }
-
-        .griditem__a--modifier:hover{
-            color:#fff;
-        }
-    }
-
-
-
-@media (min-width:1024px) {
-
-    .BodyIndexDesktop{
-        display: block;
-       }
-    .MainIndexMobile{
-        display: none;
-    }
-    
-    .Index__Cuerpo{
-        display: grid;
-        height: 40vw;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: "TextoMain ImagenMain";
-    }
-    
-    /* Header*/
-    
-   
-    
- /* Cuerpo del index*/
-     
-#primerImg{
-        width: 100vw;
-    }
-    
-.Index__Imagen1{
-        display: block;
-    }
-    
-.Index__Imagen2--modifier{
-        grid-area: ImagenMain;
-        display: inline;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 1);
-        border-width: 2px;
-        margin-top: 95px;
-        max-height:50%;
-    }
-    
-.TextoIndex__p--modifier{
-        grid-area: TextoMain;
-        font-family: "Akshar";
-        font-size: 20px;
-        text-align: center;
-        display: inline;
-        width: 300px;
-        margin-top: 65px;
-        margin-left: 190px;
-}
-
-/*Ubicación*/
-
-    .ubicacion{
-        background-color: rgba(255, 249, 224, 1);
-        display:grid;
-        grid-template-columns: auto;
-        grid-template-rows: 10% auto 10%;
-        grid-template-areas: 
-        "titulo"
-        "mapa"
-        "parrafo";
-    }
-    
-    .Section__div__h2{
-        grid-area: titulo;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        margin-top: 20px;
-        font-size: 20px;
-    }
-
-    .Section__div__mapa{
-        grid-area: mapa;
-        margin-bottom: 20px;
-    }
-
-    .Section__div__p{
-        grid-area: parrafo;
-        margin-bottom: 40px;
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    #h2__ubicacion{
-        font-family: "Akshar";
-    }
-    
-
-    .p__ubicacion{
-        font-family: "Akshar";
-        font-size: 1.4rem;
-        margin: 2rem;
-    } 
-
-    .footer__h3--modifier{
-        margin:0px 0px px 0px;
-        font-size: 22px;
-    }
-
-
-/* CONTACTO*/
-
-.contacto{
-    background-color: rgba(255, 249, 224, 1);
-    }
-    
-    .maincontacto{
-        display:grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto ;
-        grid-template-areas: 
-        "redes form ";
-        row-gap: 50px;
-    }
-    
-    .div_redes{
-        grid-area: redes;
-        background-color: rgba(252, 186, 3, 0.3);
-        width: 60%;
-        height: 300px;
-        border: 1px solid #000;
-        border-radius: 15px;
-        font-size: 33px;
-        box-shadow: 0 0 40px -10px #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 190px;
-        margin-top: 145px;
-    }
-
-    .div__ul-redes{
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .ul__a-redes{
-        text-decoration: none;
-        color:#000;
-    }
-
-    .ul__li-redes{
-        padding: 20px 0px 20px 0px;
-    }
-    
-    .form__label--modifier{
-        padding:9px;
-    }
-
-    form{
-    margin: 50px 0px 50px 50px;
-    width:500px;
+  form {
+    margin-top: 50px;
+    width: 400px;
     font-family: "Akshar";
     background-color: rgba(252, 186, 3, 0.3);
     grid-area: form;
     border: 1px solid #000;
-    border-radius: 15px;    
+    border-radius: 15px;
     box-shadow: 0 0 40px -10px #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: "Akshar";
-    }
+  }
+  form .form__label--modifier {
+    padding: 9px;
+  }
+  form .form__input--modifier {
+    margin: 5px;
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    border: 0.5px dotted #000;
+  }
+  form .form__h2--modifier {
+    -webkit-text-decoration: underline #000;
+            text-decoration: underline #000;
+    margin-top: 15px;
+  }
 
-    .form__input--modifier{
-        padding: 5px;
-        width:80%;
-        height:60px;
-        border-radius: 5px;
-        border:0.5px dotted #000;
+  /*UBICACIÓN*/
+  .Section__div__h2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
 
-    }
+  .Section__div__p {
+    grid-area: parrafo;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .form__input--modifier:focus{
-        transform:scale(1.10);
-    }
-
-    .form__h2--modifier{
-        text-decoration: underline #000;
-        margin-top: 15px;
-    }
-
-    .form__submit--modifier{
-        margin: 15px;
-        width:40%;
-        height: 50px;
-        font-size: 21px;
-        background-color: rgb(255,255,255,0.8);
-        border: 0.5px solid #000;
-        font-family: "Akshar";
-        border-radius: 5px;
-    }
-}
-/*Deportes*/
-
-.deportes{
-    background-color: rgba(255, 249, 224, 1);
-} 
-
-/*ACTIVIDADES E INSTALACIONES*/
-
-.mainacts__divcontainer--modifier{
+  /*ACTIVIDADES E INSTALACIONES*/
+  .mainacts__divcontainer--modifier {
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: center;
     align-items: center;
     row-gap: 20px;
-    margin: 40px 20px 40px 20px;
-    column-gap: 20px;
-}
-
-#actividades__h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.mainacts__griditems--modifier{
+    margin: 30px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .mainacts__divcontainer--modifier .mainacts__griditems--modifier {
     background-color: grey;
     border-radius: 8px;
     box-shadow: 0 5px 10px 0 #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:200px;
-}
-
-.griditem__a--modifier{
+    height: 120px;
+  }
+  .mainacts__divcontainer--modifier .griditem__a--modifier {
     text-decoration: none;
     color: #000;
+  }
+  .mainacts__divcontainer--modifier .griditem__a--modifier:hover {
+    color: #fff;
+  }
+}
+/*Deportes*/
+.deportes {
+  background-color: rgb(255, 249, 224);
+}
+.deportes .card_deportes {
+  margin: 51px;
+  border: 2px solid #000;
+  border-radius: 13px;
+}
+.deportes .card_deportes .card-text {
+  font-size: 1.4em;
+}
+.deportes .card-img-top {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
 }
 
-.mainacts__griditems--modifier:hover{
-    transform: scale(1.04);
-
+.card {
+  background: linear-gradient(#fff, #fdfd96);
+  box-shadow: 0 0 40px -10px rgb(0, 0, 0);
+}
+.card .cards_links {
+  text-decoration: none;
+  color: #000;
+}
+.card .card-text {
+  font-size: 1.4em;
 }
 
-.griditem__a--modifier:hover{
-    color:#fff;
-    transform: scale(5);
-    filter: opacity(0.9);
-}
+@media (min-width: 1024px) {
+  /* index*/
+  .BodyIndexDesktop {
+    display: block;
+  }
 
-#bodyactividades{
+  .MainIndexMobile {
+    display: none;
+  }
+
+  .Index__Cuerpo {
+    display: grid;
+    height: 40vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "TextoMain ImagenMain";
+  }
+  .Index__Cuerpo .Index__Imagen1 {
+    display: block;
+  }
+  .Index__Cuerpo .Index__Imagen2--modifier {
+    grid-area: ImagenMain;
+    display: inline;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    margin-top: 95px;
+    max-height: 50%;
+  }
+  .Index__Cuerpo .TextoIndex__p--modifier {
+    grid-area: TextoMain;
     font-family: "Akshar";
-    background-color: rgba(255, 249, 224, 1);
+    font-size: 20px;
+    text-align: center;
+    display: inline;
+    width: 300px;
+    margin-top: 65px;
+    margin-left: 190px;
+  }
+
+  #primerImg {
+    width: 100vw;
+  }
+
+  /*Ubicación*/
+  .ubicacion {
+    background-color: rgb(255, 249, 224);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas: "titulo" "mapa" "parrafo";
+  }
+  .ubicacion .Section__div__h2 {
+    grid-area: titulo;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .ubicacion .Section__div__mapa {
+    grid-area: mapa;
+    margin-bottom: 20px;
+  }
+  .ubicacion .Section__div__p {
+    grid-area: parrafo;
+    margin-bottom: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ubicacion #h2__ubicacion {
+    font-family: "Akshar";
+  }
+  .ubicacion .p__ubicacion {
+    font-family: "Akshar";
+    font-size: 1.4rem;
+    margin: 2rem;
+  }
+
+  /* CONTACTO*/
+  .contacto {
+    background-color: rgb(255, 249, 224);
+  }
+  .contacto .maincontacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "redes form ";
+    row-gap: 50px;
+  }
+  .contacto .div_redes {
+    grid-area: redes;
+    background-color: rgba(252, 186, 3, 0.3);
+    width: 60%;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    font-size: 33px;
+    box-shadow: 0 0 40px -10px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 190px;
+    margin-top: 145px;
+  }
+  .contacto .div_redes .div__ul-redes {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacto .div_redes .li__a-redes {
+    text-decoration: none;
+    color: #000;
+  }
+  .contacto .div_redes .ul__li-redes {
+    padding: 20px 0px 20px 0px;
+  }
+  .contacto form {
+    margin: 50px 0px 50px 50px;
+    width: 500px;
+    font-family: "Akshar";
+    background-color: rgba(252, 186, 3, 0.3);
+    grid-area: form;
+    border: 1px solid #000;
+    border-radius: 15px;
+    box-shadow: 0 0 40px -10px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Akshar";
+  }
+  .contacto form .form__label--modifier {
+    padding: 9px;
+  }
+  .contacto form .form__input--modifier {
+    padding: 5px;
+    width: 80%;
+    height: 60px;
+    border-radius: 5px;
+    border: 0.5px dotted #000;
+  }
+  .contacto form .form__input--modifier:focus {
+    transform: scale(1.1);
+  }
+  .contacto form .form__h2--modifier {
+    -webkit-text-decoration: underline #000;
+            text-decoration: underline #000;
+    margin-top: 15px;
+  }
+  .contacto form .form__submit--modifier {
+    margin: 15px;
+    width: 40%;
+    height: 50px;
+    font-size: 21px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.5px solid #000;
+    font-family: "Akshar";
+    border-radius: 5px;
+  }
+}
+/*ACTIVIDADES E INSTALACIONES*/
+.mainacts__divcontainer--modifier {
+  margin: 40px 20px 40px 20px;
+}
+.mainacts__divcontainer--modifier .mainacts__griditems--modifier {
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.mainacts__divcontainer--modifier .mainacts__griditems--modifier:hover {
+  transform: scale(1.04);
+}
+.mainacts__divcontainer--modifier .mainacts__griditems--modifier .griditem__a--modifier {
+  text-decoration: none;
+  color: #000;
+}
+.mainacts__divcontainer--modifier .mainacts__griditems--modifier .griditem__a--modifier:hover {
+  color: #fff;
+  transform: scale(5);
+  filter: opacity(0.9);
 }
 
-#actividades__h2{
-    font-size: 2.5em;
+#bodyactividades {
+  font-family: "Akshar";
+  background-color: rgb(255, 249, 224);
 }
-
-.actividades__p{
-    font-size: 1.3em;
+#bodyactividades #actividades__h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 2.5em;
 }
-
-
+#bodyactividades .actividades__p {
+  font-size: 1.3em;
+}/*# sourceMappingURL=style.css.map */
