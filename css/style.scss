@@ -2,7 +2,21 @@
     font-family: Akshar; 
     src: url('../fuentes/Akshar-VariableFont_wght.ttf'); 
 } 
-@import "Colores";
+$colorheaderfooter: linear-gradient(#0a2082, #030e42);
+$colorbackgroundpaginas:rgba(255, 249, 224, 1);
+
+$estilosColor: (headerfooter:linear-gradient(#0a2082, #030e42),backgroundpages:rgba(255, 249, 224, 1),colorContenedores:rgba(252, 186, 3, 0.3));
+
+@each $colorelemento, $color in $estilosColor{
+    .#{$colorelemento}{
+        background: $color;
+    }
+}
+
+@mixin textdecoration {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 * {
     margin: 0px;
@@ -29,49 +43,38 @@ body{
 }
 
 .footer{
-    background: linear-gradient(#0a2082, #030e42);
+    background: map-get($estilosColor, headerfooter);
 }
 
 
 @media (min-width:320px) {
 
-   .BodyIndexDesktop{
+.BodyIndexDesktop{
     display: none;
-   }
+}
 
-   .imgsindex{
+.imgsindex{
     width:190px;
     
-   }
+}
 
-   
+
     /*CONTACTO*/
 
-    .contacto{
-        background-color: $colorbackgroundpaginas;
-        }
+    // .contacto{
+    //     background-color: $colorbackgroundpaginas;
+    //     }
         
-        .maincontacto{
-            display:grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto;
-            grid-template-areas: 
-            "form" 
-            "redes";
-            row-gap: 50px;
-            align-content: center;
-            justify-content: center;
-        }
+
         
         .div_redes{
             grid-area: redes;
-            background-color: rgba(252, 186, 3, 0.3);
+            // background-color: rgba(252, 186, 3, 0.3);
             width: 400px;
             border: 1px solid #000;
             border-radius: 15px;
             font-size: 24px;
             box-shadow: 0 0 40px -10px #000;
-           
         }
     
         .div__ul-redes{
@@ -123,6 +126,7 @@ body{
             .form__h2--modifier{
                 text-decoration: underline #000;
                 margin-top: 15px;
+                @include textdecoration;
             }
         }
     
@@ -136,6 +140,7 @@ body{
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 15px;
+            @include textdecoration;
         }
     
         .Section__div__p{
@@ -181,14 +186,20 @@ body{
     /*Deportes*/
 
 .deportes{
-    background-color: $colorbackgroundpaginas;
+    // background-color: $colorbackgroundpaginas;
     .card_deportes{
         margin:51px;
         border: 2px solid #000;
         border-radius: 13px;
         .card-text{
             font-size: 1.4em;
+            color:#2e2c27;
         }
+    }
+
+    .card-text--nuevo{
+        @extend .card-text;
+        text-decoration: underline;
     }
         
     .card-img-top{
