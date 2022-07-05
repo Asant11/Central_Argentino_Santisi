@@ -51,39 +51,25 @@ body {
     width: 190px;
   }
 
-  /*CONTACTO*/
-  .div_redes {
-    grid-area: redes;
-    width: 400px;
-    border: 1px solid #000;
-    border-radius: 15px;
-    font-size: 24px;
-    box-shadow: 0 0 40px -10px #000;
+  .nav__h1--modifier {
+    font-size: 23px;
+    display: inline;
   }
 
-  .div__ul-redes {
-    list-style-type: none;
+  .imgLogoNav {
+    width: 60px;
+    height: 60px;
+  }
+
+  /*CONTACTO*/
+  .maincontacto {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 1em;
   }
-  .div__ul-redes .ul__li-redes {
-    margin: 10px 0px 10px 0px;
-  }
-  .div__ul-redes .ul__li-redes .li__a-redes {
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-  }
-  .div__ul-redes .ul__li-redes .li__a-redes:hover {
-    color: #0a2082;
-  }
-
-  form {
+  .maincontacto form {
     margin-top: 50px;
-    width: 400px;
+    width: 300px;
     font-family: "Akshar";
     background-color: rgba(252, 186, 3, 0.3);
     grid-area: form;
@@ -95,18 +81,19 @@ body {
     align-items: center;
     justify-content: center;
     font-family: "Akshar";
+    margin-bottom: 15px;
   }
-  form .form__label--modifier {
+  .maincontacto form .form__label--modifier {
     padding: 9px;
   }
-  form .form__input--modifier {
+  .maincontacto form .form__input--modifier {
     margin: 5px;
     width: 80%;
     height: 60px;
     border-radius: 5px;
     border: 0.5px dotted #000;
   }
-  form .form__h2--modifier {
+  .maincontacto form .form__h2--modifier {
     -webkit-text-decoration: underline #000;
             text-decoration: underline #000;
     margin-top: 15px;
